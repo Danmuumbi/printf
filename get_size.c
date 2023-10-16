@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_size - function to get the size 
+ * get_size - function to get the size
  * @format: formated string
  * @ip: pointer to list argument to be printed
  *
