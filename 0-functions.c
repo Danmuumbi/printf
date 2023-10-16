@@ -15,7 +15,7 @@ int print_char(va_list types, char buffer[], int f, int w, int pre, int s)
 {
 	char ch = va_arg(types, int);
 
-	return (handle_write_char(c, buffer, f, w, pre, s));
+	return (handle_write_char(ch, buffer, f, w, pre, s));
 }
 
 /**
@@ -48,7 +48,7 @@ int print_string(va_list types, char buffer[], int f, int w, int pre, int s)
 	while (str[len] != '\0')
 		len++;
 	if (pre >= 0 && pre < len)
-		len pre;
+		len = pre;
 
 	if (w > len)
 	{
@@ -57,7 +57,8 @@ int print_string(va_list types, char buffer[], int f, int w, int pre, int s)
 			write(1, &str[0], len);
 			i = w - len;
 			while (i > 0)
-			}
+			{
+
 				write(1, " ", 1);
 				i--;
 			}
@@ -100,7 +101,7 @@ int print_int(va_list types, char buffer[], int f, int w, int pre, int s)
 	num1 = convert_size_number(num1, s);
 
 	if (num1 == 0)
-		buffwe[i--] = '0';
+		buffer[i--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 	num2 = (unsigned long int)num1;

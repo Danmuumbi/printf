@@ -14,7 +14,7 @@ int get_width(const char *format, int *ip, va_list arg)
 	int w = 0;
 	int cip;
 
-	cip = *i + 1;
+	cip = *ip + 1;
 	while (format[cip] != '\0')
 	{
 		if (is_digit(format[cip]))

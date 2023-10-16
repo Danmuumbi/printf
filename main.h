@@ -44,10 +44,10 @@ typedef struct fmt fmt_t;
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-<<<<<<< HEAD
+/* <HEAD> */
 int get_width(const char *format, int *ip, va_list arg);
 int is_digit(char c);
-=======
+
 int handle_print(const char *format, int *indx,
 va_list list_arg, char buffer[], int f, int w, int pre, int s);
 
@@ -116,6 +116,6 @@ int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
->>>>>>> refs/remotes/origin/master
+/* <refs/remotes/origin/master> */
 
 #endif /* MAIN_H */

@@ -37,6 +37,6 @@ int get_precision(const char *format, int *ip, va_list arg)
 			break;
 		cip++;
 	}
-	*ip = cip _ 1;
+	*ip = cip - 1;
 	return (pre);
 }
