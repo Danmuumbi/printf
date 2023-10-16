@@ -48,24 +48,19 @@ int _printf(const char *format, ...);
 int get_width(const char *format, int *ip, va_list arg);
 int is_digit(char c);
 =======
-int handle_print(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+int handle_print(const char *format, int *indx,
+va_list list_arg, char buffer[], int f, int w, int pre, int s);
 
 /****************** FUNCTIONS ******************/
 
 /* Funtions to print chars and strings */
-int print_char(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_percent(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int print_char(va_list types, char buffer[], int f, int w, int pre, int s);
+int print_string(va_list types, char buffer[], int f, int w, int pre, int s);
+int print_percent(va_list types, char buffer[], int f, int w, int pre, int s);
 
 /* Functions to print numbers */
-int print_int(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
-int print_binary(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+int print_int(va_list types, char buffer[], int f, int w, int pre, int s);
+int print_binary(va_list types, char buffer[], int f, int w, int pre, int s);
 int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_octal(va_list types, char buffer[],
