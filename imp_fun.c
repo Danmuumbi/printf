@@ -55,3 +55,26 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 		return (num);
 	return ((unsigned int)num);
 }
+
+/**
+ * append_hexa_code - hexa to buffer
+ * @ascii: ascii code
+ * @buffer: array
+ * @i: index
+ * Return: Always 3
+ */
+int append_hexa_code(char ascii, char buffer[], int i)
+{
+	char maps[] = "123456789ABCDEF";
+
+	if (ascii < 0)
+		ascii *= -1;
+
+	buffer[i++] = '\\';
+	buffer[i++] = 'x';
+
+	buffer[i++] = maps[ascii / 16];
+	buffer[i] = maps[ascii % 16];
+
+	return (3);
+}
