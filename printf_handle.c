@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * handle_print - function print arguments
